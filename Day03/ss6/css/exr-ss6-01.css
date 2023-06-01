@@ -1,0 +1,28 @@
+*{
+	Padding: 0;
+	Margin: 0;
+	Box-sizing: border-box;
+	Outline: none;
+}
+
+.body{
+    width: 40%;
+    margin:auto;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+ul li{
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid grey;
+    padding-bottom: 30px;
+    list-style: none;
+}
+
+i{
+    margin-right: 10px;
+}

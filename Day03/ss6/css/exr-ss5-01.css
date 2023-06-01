@@ -1,0 +1,61 @@
+*{
+	Padding: 0;
+	Margin: 0;
+	Box-sizing: border-box;
+	Outline: none;
+}
+
+
+.body{
+    
+}
+
+.header img{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.header div{
+    width: 60%;
+    background-color: #DF9C00;
+    text-align: left;
+    text-indent: 10%;
+    font-size: 30px;
+    color: #ffff;
+    margin:auto;
+}
+
+.header{
+    margin-bottom: 10px;
+}
+
+ul>li{
+    width: 60%;
+    margin:auto;
+    display:block;
+    border-top: 2px solid #E9E9EA;
+    padding: 10px 0;
+}
+
+.title{
+    font-weight: bold;
+    text-align: left;
+}
+
+.content{
+    display:flex;
+    margin-top: 10px;
+}
+
+.content img{
+    width: 40%;
+    height: auto;
+}
+
+.content div{
+    margin-left: 10px;
+    width: auto;
+    text-align: justify;
+}

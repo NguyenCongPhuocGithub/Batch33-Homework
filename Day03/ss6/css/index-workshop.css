@@ -67,8 +67,9 @@ div.task3{
 }
 .task3 p{
     margin-left: 10px;
-    width: calc(100%-70px);
-    color:aliceblue
+    width: calc(100% - 60px);
+    color:aliceblue;
+    float: inline-end;
 }
 
 .task3 blockquote{

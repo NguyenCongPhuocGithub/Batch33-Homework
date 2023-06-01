@@ -1,0 +1,160 @@
+*{
+	Padding: 0;
+	Margin: 0;
+	Box-sizing: border-box;
+	Outline: none;
+}
+
+.body{
+    width: 80%;
+    margin:auto;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex{
+    display: flex;
+}
+
+/* Start collum left */
+.collum-left{
+    width: 30%;
+    border-color: aqua;
+    background-color: #333;
+    color:aliceblue;
+}
+
+.collum-right{
+    width: calc(100% - 30%);
+    padding-left: 20px;
+}
+
+header>div>h2{
+    font-size: 60px;
+    word-spacing: 10px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: #9DA3A7;
+    margin: 20px 0 30px 40px;
+}
+
+span{
+    font-size: 20px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: #9DA3A7;
+    margin: 20px 0 30px 40px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display:block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+h1{
+    width: 30%;
+    background-color: #333;
+    padding: 30px 0 0 30px;
+    color: aliceblue;
+}
+
+.collum-left-container>h2{
+    font-weight: bold;
+    font-size: 40px;
+    text-transform:uppercase ;
+    margin:20px 0 20px 0;
+}
+
+.collum-left-container{
+    width: 80%;
+    margin: auto;
+}
+
+.collum-left-container>section>h3{
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.collum-left-container>section>em{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.collum-left-container>section>ul{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+/* End collum left */
+
+.job-exp-date{
+    width: 30%
+}
+
+.job-exp-company{
+    width:calc(100%-30%)
+}
+
+.job-edu-date{
+    width: 30%
+}
+
+.job-exp-date, .job-edu-date{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.collum-right-container h2{
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.job-edu-university{
+    width:calc(100%-30%)
+}
+
+.job-exp h3, .job-edu h3{
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #9DA3A7;
+}
+
+.job-exp-company p:nth-child(2), .job-edu-university p:nth-child(2){
+    color: #9DA3A7;
+}
+
+.job-exp-company p:nth-child(3), .job-edu-university p:nth-child(3){
+    text-transform: none;
+    margin-bottom: 10px;
+}
+
+.job-skill{
+    width: 100%;
+    padding-left: 100px;
+    margin-right: 10px;
+}
+
+.job-skill-name{
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.job-skill-process{
+    background-color: #9DA3A7;
+    height: 30px;
+    width: calc(100% - 100px);
+    margin-left: 30px;
+}
+
+.skill-persent{
+    height: 30px;
+    background-color: black;
+}
+
