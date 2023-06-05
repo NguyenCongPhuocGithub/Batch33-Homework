@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework-Day06</title>
+    <style>
+        #task4{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task 3 -->
+    <!-- <button name= "delete" type="button" onclick="console.log(confirm('Bạn có muốn xóa record này không ?'))">Delete</button>   -->
+
+    <!-- Task 4 -->
+    <!-- <div id="task4" onmouseover="console.log('Bạn đã rê chuột lên hình vuông')"></div> -->
+
+    <!-- Task 6 -->
+    <!-- <p id= "add_product"></p>
+    <button name= 'addproduct' onclick="document.getElementById('add_product').innerHTML= 'Bạn đã thêm vào giỏ hàng thành công !'">Thêm vào giỏ hàng</button> -->
+    
+    <!-- Task 7 -->
+    <input id="add_text" type="text" onkeypress="onKeyPress()" onkeyup="onKeyUp()" onkeydown="onKeyDown()" name= "event" placeholder="Nhập vào chuỗi ký tự">
+
+    <script>
+        // Task 1
+        // let a = prompt('Tên của bạn là gì?');
+        // let b = prompt('Mật khẩu của bạn là gì?');
+        // console.log("Tên của bạn là:" +a+"\n"+"Mật khẩu của bạn là:" +b);
+        // document.write("<span>Tên của bạn là: </span>" +a +"<span><br>Mật khẩu của bạn là </span>" +b);
+
+        // Task 2
+        // let a = prompt('a');
+        // let b = prompt('b');
+        // let c = parseInt(a) + parseInt(b);
+        // let d = parseInt(a) - parseInt(b);
+        // console.log("a+b: " +c +"\n"+"a-b: " +d);
+        // document.write("<span>a+b: </span>" +c +"<span><br>a-b: </span>" +d) 
+
+        //  Task 3 -- false
+        // const isConfirm = confirm("Bạn có muốn xóa record này không ?")
+        // if(isConfirm === true){
+        //     console.log('Delete successfully')
+        // }
+        // else{
+        //     console.log('Delete not successfully')
+        // }
+
+        // Task 5
+        // let getInput = prompt("getInput")
+        // if(isNaN(getInput) === true){
+        //     console.log('This not number')
+        // }
+        // else{
+        //     console.log('This is number')
+        // }
+
+        // Task 7
+        function onKeyPress() {
+        console.log("Đã nhấn phím");
+        }
+
+        function onKeyUp() {
+            console.log("Bỏ tay ra khỏi phím");
+        }
+
+        function onKeyDown() {
+            console.log("Nhấn phím");
+        }
+    </script>
+</body>
+</html>
