@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework-Day07-basic</title>
+</head>
+<body>
+    <!-- Task 02 -->
+    <!-- <button id = 'del' type="button" name="delete" onclick= isConfirm >Delete</button> -->
+    
+    <script>
+    // // Task 01
+    // let userName = prompt('userName');
+    // let passWord = prompt('passWord');
+    // if(userName === 'aptech' && passWord === '38yenbai'){
+    //     console.log('Bạn đã đăng nhập thành công', alert('Bạn đã đăng nhập thành công'));
+    // } else{
+    //     console.log('userName hoặc mật khẩu không hợp lệ', alert('userName hoặc mật khẩu không hợp lệ'));
+    //     userName = prompt('xin mời nhập lại userName');
+    //     passWord = prompt('xin mời nhập lại passWord');
+    //     if(userName === 'aptech' && passWord === '38yenbai'){
+    //         console.log('Bạn đã đăng nhập thành công', alert('Bạn đã đăng nhập thành công'));
+    //     }else{
+    //         console.log('userName hoặc mật khẩu không hợp lệ', alert('bạn không thể đăng nhập được nữa'));
+    //     }
+    // }
+
+    // // Task 02
+    // let isConfirm = confirm('Bạn có chắc chắn muốn xóa record này không ?')
+    //     if(isConfirm === true){
+    //     console.log('đã xóa');
+    //     }else{
+    //     console.log('không xóa')
+    //     }
+
+    // Task 03
+    // let array = [1, 2, 3, 4, 5]
+    // // hiển thị ra phần tử đầu tiên
+    // console.log(array[0]); 
+
+    // //thêm một phần từ mới vào cuối mảng, và hiển thị danh sách mảng mới ra console
+    // let newArray = [];
+    // newArray = newArray.concat(array);
+    // newArray.push(6);
+    // console.log(newArray);
+
+    // // lấy số lượng phần tử của mảng trên show ra console
+    // console.log(array.length);
+
+    // // Render ra console giá trị từng phần tử của mảng trên như bên dưới
+    // let outPut = '/* Output:' + '\n';
+    // for (let index = 0; index < newArray.length; index++) {
+    //     outPut += newArray[index] + '\n';
+    // }
+    // outPut += '*/';
+    // console.log(outPut);
+
+    // Task 04
+    let arrayCar = ['honda', 'bmw', 'mer', 'toyota', 'lexus'];
+    // thay đổi tên hãng xe xếp thứ 2 trong mảng bạn vừa định nghĩa ở bước 1 và in kết quả ra console
+    arrayCar[1] = 'porsche';
+    // định nghĩa một mảng mới và thêm vào cuối mảng hãng xe thứ 6 - in ra kết quả console
+    let newArrayCar = [];
+    newArrayCar = newArrayCar.concat(arrayCar);
+    newArrayCar.push('rollRoyce');
+    console.log(newArrayCar);
+    // Gộp 2 mảng ở bước 1 và bước 3 lại thành một mảng mới, và in kết quả ra console
+    let mergeArrayCar;
+    mergeArrayCar = arrayCar.concat(newArrayCar);
+    console.log(mergeArrayCar);
+    </script>
+</body>
+</html>

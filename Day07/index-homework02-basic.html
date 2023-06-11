@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework02-Day07-basic</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table style="text-align: center;">
+        <tr>
+            <td>a</td>
+            <td>b</td>
+        </tr>
+        <tr style="text-align: left; margin: 10px 10px;" >
+            <td style="margin: 10px 10px; padding: 10px 10px;">Lorem, ipsum dolor sit amet </td>
+            <td>Lorem, ipsum dolor sit amet </td>
+        </tr>
+    </table> -->
+    <script>
+        // // Task 01
+        // const cars = ['Toyota', 'Honda', 'Kia', 'BMW', 'Audi', 'Mitsubishi'];
+        // let renderCar = '<ul>' + '\n'
+        //     for (let index = 0; index < cars.length; index++) {
+        //         renderCar += '<li>' + cars[index] + '</li>' + '\n';
+        //     }
+        // renderCar += '</ul>'  
+        // console.log(renderCar);
+        // document.write(renderCar);
+
+        // // Task 02
+        let arrayProduct = [
+            {name: 'Áo bull Size M', quantity: 6, price: 10},
+            {name: 'Áo khoác gió NorthFace Size L', quantity: 4, price: 10},
+            {name: 'Quần Jean Nam Size 30', quantity: 4, price: 15}         
+        ];
+        let sum = 0;
+        let myTable = '<table style="text-align: left; padding: 10px 10px;">' + '\n';
+            myTable += '<tr><td style="text-align: center;">name</td><td style="text-align: center;">quantity</td><td style="text-align: center;">price</td><td style="text-align: center;">total</td></tr>';
+        // for (let index = 0; index < arrayProduct.length; index++) {
+        //     myTable += `<tr><td>${arrayProduct[index].name}</td><td>${arrayProduct[index].quantity}</td><td>${arrayProduct[index].price}</td></tr>` + '\n';
+        // }
+        for (index in arrayProduct) {
+            myTable += `<tr><td>${arrayProduct[index].name}</td><td style="text-align: center;">${arrayProduct[index].quantity}</td><td style="padding: 0px 10px">${arrayProduct[index].price}</td><td>${arrayProduct[index].quantity * arrayProduct[index].price}</td></tr>` + '\n' ;
+        }
+        for (let index = 0; index < arrayProduct.length; index++) {
+            sum += ((arrayProduct[index].price) * (arrayProduct[index].quantity))
+        }
+            myTable += `<tr style="text-align: center;"><td colspan = '3'>tổng tiển</td><td style="text-align: left;">${sum}</td></tr>`;
+            myTable += '</table>';
+        // <td style="text-align: left;">${sum += (arrayProduct[arrayProduct.length - 1].price * arrayProduct[arrayProduct.length - 1].quantity) + (arrayProduct[arrayProduct.length - 2].price * arrayProduct[arrayProduct.length - 2].quantity) + (arrayProduct[arrayProduct.length - 3].price * arrayProduct[arrayProduct.length - 3].quantity)}</td>
+        // document.write(arrayProduct.length -1)
+        console.log(myTable);
+        document.write(myTable);
+    </script>
+</body>
+</html>
