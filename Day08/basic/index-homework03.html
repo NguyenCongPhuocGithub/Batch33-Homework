@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="child_one">Child 1</li>
+        <li class="child_two">
+            <img src="https://fashionelite.com/wp-content/uploads/2016/09/1331144712_IMG_paris1.jpg" alt="photo" />
+        </li>
+        <li class="child_three"><a href="link3">Child 3</a></li>
+    </ul>
+
+    <script>
+        //i
+        let a = document.getElementById("list");
+        a.id = "list"
+        //ii
+        let b = document.getElementById("list").firstElementChild
+        console.log(b)
+        //iii
+        let img = document.querySelector("img")
+        console.log('<<=== img.src ===>>',img.src);
+        console.log('<<=== img.alt ===>>',img.alt);
+        //iv
+        img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuS_4QP0NtO3LKaMOfHMVTKx70R1VhBVVMoFozxCV5Fg&s"
+        img.atl = "photo-edit"
+        console.log('<<== src ==>>',img.src);
+        console.log('<<== alt ==>>',img.alt);
+        //v
+        let threeLi = document.getElementsByClassName("child_three")
+        console.log('<<=== threeLi===>>',threeLi);
+
+    </script>
+</body>
+</html>

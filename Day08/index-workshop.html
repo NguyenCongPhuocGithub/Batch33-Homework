@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>workshop-Day08</title>
+</head>
+<body>
+    <script>
+    // // Task 01
+    // let x = parseInt(prompt('x'));
+    // let y = parseInt(prompt('y'));
+    // function calculation(x,y) {
+    //      return `\n x + y = ${x + y} \n x - y = ${x - y} \n x * y = ${x*y} \n x / y = ${x/y}`;
+    // }
+    // let xy = calculation(x,y);
+    // console.log('<<=== xy ===>>',xy);
+
+    // // Task 02
+    // let a = parseInt(prompt('a'));
+    // let b = parseInt(prompt('b'));
+    // function calculation(a,b) {
+    //      return `</br> a + b = ${a + b} </br> a - b = ${a - b} </br> a * b = ${a*b} </br> a / b = ${a/b} </br> a % b = ${a%b}`;
+    // }
+    // let ab = calculation(a,b);
+    // document.write('ab', ab)
+
+    // // Task 03
+    // let a = parseInt(prompt('a'));
+    // let b = parseInt(prompt('b'));
+    // let type = prompt('type')
+    // function calculation(a,b,type) {
+    //     if(type === 'add'){
+    //         return `a + b = ${a + b} </br>`
+    //     } else if(type === 'div'){
+    //         return `a / b = ${a/b} </br>`
+    //     } else if(type === 'mul'){
+    //         return `a * b = ${a*b} </br>`
+    //     } else if (type === 'sub'){
+    //         return `a - b = ${a - b} </br>`
+    //     } else{
+    //         return 'các trường hợp không hợp lệ'
+    //     }
+    // }
+    // let ab = calculation(a,b,type);
+    // document.write('ab', ab)
+
+    // Task 04
+//     function studentObject(name, age, gender, birth, height, weight, national) {
+//     this.name = name;
+//     this.age = age;
+//     this.birth = birth;
+//     this.height = height;
+//     this.weight = weight;
+//     this.national = national;
+//   }
+
+    // Task 05
+    function user(id, name, email, gender) {
+    this.id = id;
+    this.name = name;
+    this.email = email;
+    this.gender = gender;
+  }
+    // Bước 01
+  let userA = new user( 001, 'user1', 'user1@gmail.com', 'male')
+//   console.log('<<=== userA===>>', userA);
+    // Bước 02
+  userA.name = 'Nguyễn Văn A'
+//   console.log('<<=== userA===>>', userA);
+  let userC = userA;
+  console.log('<<=== userC ===>>',userC);
+    // Bước 03
+  let userB = new user( 002, 'user2', 'user2@gmail.com', 'male')
+  userB = {...userB,role : 'admin'}
+//   console.log('<<=== userB ===>>',userB);
+  let userNew = {address: '69 lÝ Thái Tổ, Đà Nẵng', phone: 0931368725}
+  let userMerge ={...userA, ...userNew}
+  console.log('<<=== userMerge ===>>',userMerge);
+    </script>
+</body>
+</html>

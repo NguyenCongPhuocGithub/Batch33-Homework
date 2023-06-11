@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table tr td {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id ="table"></div>
+    <script>
+        const users = [
+          { id: 1, name: 'iPhone 12 Pro Max', price: 250000000, quanlity: 1 },
+          { id: 2, name: 'Samsung Galaxy S21', price: 32000000, quanlity: 1 },
+          { id: 3, name: 'Xiaomi Note 11', price: 18000000, quanlity: 2 },
+          { id: 4, name: 'Galaxy Ford Pro', price: 47000000, quanlity: 1 },
+          { id: 5, name: 'OPPO Find N2 Flip 5G', price: 19990000, quanlity: 3 }
+        ];
+            let table = `<table>`;
+                table += `<tr><th>Id</th><th>Name</th><th>Price</th><th>Quanlity</th></tr>`;
+            for(i = 0 ; i < users.length ; i++){
+                table += `<tr><td class = "id${i}"></td><td class = "name${i}"></td><td class = "price${i}"></td><td class = "quanlity${i}"></td></tr>`;
+            }
+            table += `</table>`;
+            let showTable = document.getElementById("table").innerHTML = table;
+            for(i = 0 ; i < users.length ; i++){
+                document.querySelector(`.id${i}`).innerHTML = users[i].id;
+                document.querySelector(`.name${i}`).innerHTML = users[i].name;
+                document.querySelector(`.price${i}`).innerHTML = users[i].price;
+                document.querySelector(`.quanlity${i}`).innerHTML = users[i].quanlity;
+            }
+        </script>
+</body>
+</html>

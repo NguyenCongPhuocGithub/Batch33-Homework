@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="quantity" type="number" name="quantity" value="1"  placeholder="1" onchange ="calMoney()">
+    <button id="up-quantity" type="button" onclick="upQuantiry(); calMoney()">Up quantity</button>
+    <button id="down-quantity" type="button" onclick="downQuantity(); calMoney()">Down quantity</button>
+    <div style="display: flex; flex-direction: row; margin: 10px 0; column-gap: 10px;">
+        <input id="price" type="number" name="price" value="0" placeholder="price" onchange="calMoney()">
+        <span>Price</span>
+    </div>
+    <span>Total money:</span> 
+    <span id ="money" onchange="calMoney()"></span>
+    <script>
+
+        function upQuantiry(){
+            document.getElementById("quantity").value++;
+        }
+
+        function downQuantity(){
+           document.getElementById("quantity").value--;
+        }
+        console.log(upQuantiry());
+        console.log(downQuantity());
+
+        function calMoney() {
+            let getQuantity = document.getElementById("quantity").value;
+            let getPrice = document.getElementById("price").value;
+            document.getElementById("money").innerHTML = getQuantity * getPrice;
+        }
+        calMoney();
+    </script>
+</body>
+</html>

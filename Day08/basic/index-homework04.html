@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="username" type="text" name="username" value="" onchange="userName"/>
+    <input  placeholder="password" type="text" name="password" value="" onchange="passWord"/>
+    <script>
+        //Bước 01
+        let userName = document.getElementsByName("username")
+        userName.value = "10"
+        let passWord = document.getElementsByName("password")
+        passWord.value = "abc"
+        console.log('<<=== username.value ===>>',userName.value);
+        console.log('<<=== passwork.value ===>>',passWord.value);
+        //Bước 02
+        userName.id = "username"
+        passWord.id = "password"
+        console.log('<<=== userName.id ===>>',userName.id);
+        console.log('<<=== passWord.id ===>>',passWord.id);
+        //Bước 03
+        // console.log('<<=== userName.value ===>>',userName);
+        // console.log('<<=== passWord.value ===>>',passWord);
+        let userNameEdit = userName.value
+        let passWordEdit = passWord.value
+        console.log('<<=== userName.value ===>>',userNameEdit);
+        console.log('<<=== passWord.value ===>>',passWordEdit);
+    </script>
+</body>
+</html>
