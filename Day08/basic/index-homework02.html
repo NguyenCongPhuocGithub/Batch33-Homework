@@ -27,11 +27,13 @@
           { id: 4, name: 'Galaxy Ford Pro', price: 47000000, quanlity: 1 },
           { id: 5, name: 'OPPO Find N2 Flip 5G', price: 19990000, quanlity: 3 }
         ];
+            let total = 0;
             let table = `<table>`;
-                table += `<tr><th>Id</th><th>Name</th><th>Price</th><th>Quanlity</th></tr>`;
+                table += `<tr><th>Id</th><th>Name</th><th>Price</th><th>Quanlity</th><th>Amount</th</tr>`;
             for(i = 0 ; i < users.length ; i++){
-                table += `<tr><td class = "id${i}"></td><td class = "name${i}"></td><td class = "price${i}"></td><td class = "quanlity${i}"></td></tr>`;
+                table += `<tr><td class = "id${i}"></td><td class = "name${i}"></td><td class = "price${i}"></td><td class = "quanlity${i}"></td><td class = "amount${i}"></td></tr>`;
             }
+            table += `<tr><td style='text-align:center' colspan ='4'>Total</td><td class= 'total' style="text-align: left;"></td></tr>`
             table += `</table>`;
             let showTable = document.getElementById("table").innerHTML = table;
             for(i = 0 ; i < users.length ; i++){
@@ -39,6 +41,9 @@
                 document.querySelector(`.name${i}`).innerHTML = users[i].name;
                 document.querySelector(`.price${i}`).innerHTML = users[i].price;
                 document.querySelector(`.quanlity${i}`).innerHTML = users[i].quanlity;
+                let amount = document.querySelector(`.amount${i}`).innerHTML = users[i].quanlity * users[i].price;
+                total += amount;
+                let showTotal = document.querySelector(".total").innerHTML = total;
             }
         </script>
 </body>
