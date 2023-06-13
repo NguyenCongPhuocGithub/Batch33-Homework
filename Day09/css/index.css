@@ -8,10 +8,3 @@
     width: calc((100% - 30px) / 4 );
 }
 
-.article_item{
-    column-gap: 10px;
-}
-
-.main_content{
-    row-gap: 20px;
-}

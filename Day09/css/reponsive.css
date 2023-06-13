@@ -104,6 +104,7 @@
 
     .footer-wrapper{
         flex-wrap: wrap;
+        row-gap: 10px;
     }
 
     .footer-wrapper .footer_col {
