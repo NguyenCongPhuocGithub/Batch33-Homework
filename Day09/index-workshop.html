@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>build-layout</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reponsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header_middel flex justify-between">
+                <div>Logo</div>
+                <div class="nav_header">
+                    <ul class="flex">
+                        <li><a href=""></a>Home</li>
+                        <li><a href=""></a>Product</li>
+                        <li><a href=""></a>Blog</li>
+                        <li><a href=""></a>Contact</li>
+                    </ul>
+                    <div id="toggle" onclick="toggle()">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main_content-wrapper flex justify-between">
+                <div class="main_content flex-collum">
+                    <div class="article_list">
+                        <article class="article_item flex">
+                            <div class="photo"><img src="https://via.placeholder.com/200" alt="photo"></div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquam dignissimos, ipsam ea repellendus suscipit impedit explicabo ullam nesciunt sint iusto assumenda nisi velit excepturi eos veritatis quas ad neque!</p>
+                        </article>
+                    </div>
+                    <div class="product_list flex justify-between flex-wrap">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                    </div>
+                </div>
+                <aside>sideBar</aside>
+            </div>
+            </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper flex justify-center text-align justify-between">
+                <div class="footer_col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis quae at culpa, nemo suscipit dolorum corrupti cum veniam. Sapiente id facilis incidunt consectetur magni suscipit perspiciatis voluptates unde culpa.</div>
+                <div class="footer_col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque animi debitis temporibus impedit consequuntur quasi dolorum eos beatae qui voluptates neque, dicta minima inventore hic et ea, dolorem illum. Excepturi?</div>
+                <div class="footer_col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi similique quae dicta autem magni cum itaque laboriosam? Voluptatem, odit soluta culpa atque dignissimos provident iure vitae accusantium aspernatur modi?</div>
+                <div class="footer_col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cum vitae impedit, nihil eaque neque! Alias praesentium distinctio aspernatur perspiciatis recusandae, accusamus esse adipisci cupiditate odio explicabo maiores nobis voluptatum.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggle() {
+            var toggleTable = document.querySelector(".nav_header");
+            toggleTable.classList.toggle("activated")
+            // console.log("oke")
+            // console.log(toggleTable)
+        }
+    </script>
+</body>
+</html>

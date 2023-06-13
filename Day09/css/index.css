@@ -1,0 +1,17 @@
+.product_list .item{
+    width: calc((100% - 30px) / 4 );
+    height: 280px;
+    background-color: rgb(195, 192, 192);
+}
+
+.footer-wrapper .footer_col{
+    width: calc((100% - 30px) / 4 );
+}
+
+.article_item{
+    column-gap: 10px;
+}
+
+.main_content{
+    row-gap: 20px;
+}
