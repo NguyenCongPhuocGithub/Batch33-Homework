@@ -18,7 +18,7 @@
         ];
 
         // Save to storage
-        // Star build function product1
+        // Start build function product1
         let productsArray = [];
         let checkProductExist = true;
         function addProduct1(){
@@ -43,7 +43,6 @@
                             localStorage.setItem('products', JSON.stringify(productsArray));
                             // Change the checkProductExist variable that end of the for loop, no need to add a new product , because already in the storage
                             checkProductExist = false
-                            break;
                         }
                     };
                     // if checkProductExist variable is true => don't add new product, don't exist in storage
@@ -58,7 +57,7 @@
             }
         }
         // End build function product1
-         // Star build function product2
+         // Start build function product2
          function addProduct2(){
             console.log('<<== addProduct02==>>');
             if (typeof Storage !== 'undefined'){
@@ -82,7 +81,6 @@
                             localStorage.setItem('products', JSON.stringify(productsArray));
                             // Change the checkProductExist variable that end of the for loop, no need to add a new product , because already in the storage
                             checkProductExist = false
-                            break;
                         }
                     };
                     // if checkProductExist variable is true => don't add new product, don't exist in storage
