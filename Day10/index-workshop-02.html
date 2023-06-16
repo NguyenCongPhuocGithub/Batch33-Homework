@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop-02</title>
+</head>
+<body>
+    <button class ="addProduct" type="button" onclick="addProduct1()"> add product 1</button>
+    <button class ="addProduct" type="button" onclick="addProduct2()"> add product 2</button>
+    <button class ="addProduct" type="button" onclick="removeAll()"> remove all product</button>
+    <div id="result"></div>
+    <script>
+        let productArrayLocal = [
+            {id: 1, name: 'iPhone 4', price: 200, quantity: 1},
+            {id: 2, name: 'iPhone 5', price: 250, quantity: 1},
+        ];
+
+        // Save to storage
+        // Star build function product1
+        let productsArray = [];
+        let checkProductExist = true;
+        function addProduct1(){
+            console.log('<<== addProduct01==>>');
+            if (typeof Storage !== 'undefined'){
+            let products = localStorage.getItem('products');
+            // console.log('<<=== products ===>>',products);
+            if (!products) {
+                    // let productsArray = [];
+                    // get element productArrayLocal[0] in productsArray and save to storage
+                    productsArray.push(productArrayLocal[0]);
+                    localStorage.setItem('products', JSON.stringify(productsArray));
+                }else {
+                    let productsArray = JSON.parse(products);
+                    // Definition variable "checkProductExist" to check product have exist in storage
+                    // let checkProductExist = true;
+                    // Use the for loop to check id of each element in productsArray have same id of each element productArrayLocal
+                    for (let i = 0; i < productsArray.length; i++) {
+                        
+                        if (productsArray[i].id == productArrayLocal[0].id) {
+                            productsArray[i].quantity = productsArray[i].quantity + 1;
+                            localStorage.setItem('products', JSON.stringify(productsArray));
+                            // Change the checkProductExist variable that end of the for loop, no need to add a new product , because already in the storage
+                            checkProductExist = false
+                            break;
+                        }
+                    };
+                    // if checkProductExist variable is true => don't add new product, don't exist in storage
+                    if (checkProductExist) {
+                        productsArray.push(productArrayLocal[0]);
+                        localStorage.setItem('products', JSON.stringify(productsArray));
+                    }
+                }
+                location.reload(); 
+            }else {
+                console.log('<<== Browser does not support ==>>');
+            }
+        }
+        // End build function product1
+         // Star build function product2
+         function addProduct2(){
+            console.log('<<== addProduct02==>>');
+            if (typeof Storage !== 'undefined'){
+            let products = localStorage.getItem('products');
+            // console.log('<<=== products ===>>',products);
+            // first add product
+            if (!products) {
+                // let productsArray = [];
+                    // get element productArrayLocal[0] in productsArray and save to storage
+                    productsArray.push(productArrayLocal[1]);
+                    localStorage.setItem('products', JSON.stringify(productsArray));
+                }else {
+                    let productsArray = JSON.parse(products);
+                    // Definition variable "checkProductExist" to check product have exist in storage
+                    // let checkProductExist = true;
+                    // Use the for loop to check id of each element in productsArray have same id of each element productArrayLocal
+                    for (let i = 0; i < productsArray.length; i++) {
+                        
+                        if (productsArray[i].id == productArrayLocal[1].id) {
+                            productsArray[i].quantity = productsArray[i].quantity + 1;
+                            localStorage.setItem('products', JSON.stringify(productsArray));
+                            // Change the checkProductExist variable that end of the for loop, no need to add a new product , because already in the storage
+                            checkProductExist = false
+                            break;
+                        }
+                    };
+                    // if checkProductExist variable is true => don't add new product, don't exist in storage
+                    if (checkProductExist) {
+                        productsArray.push(productArrayLocal[1]);
+                        localStorage.setItem('products', JSON.stringify(productsArray));
+                    }
+                }
+                location.reload(); 
+            }else {
+                console.log('<<== Browser does not support ==>>');
+            }
+        }
+        // End build function product2
+    function removeAll() {
+        localStorage.clear();
+    }
+
+    //render html
+    const getData = () => {
+            if (typeof Storage !== 'undefined') {
+                let products = localStorage.getItem('products');
+                if (products) {
+                    return JSON.parse(products);
+                }
+            }
+        }
+        
+        const products = getData();
+        let html = `<ul>`;
+        for (let index = 0; index < products.length; index++) {
+            html += `<li> id: ${products[index].id}, name: ${products[index].name}, price: ${products[index].price}, quantity: ${products[index].quantity}</li>`
+        }
+        html += `</ul>`;
+        document.querySelector("#result").innerHTML = html; 
+
+    </script>
+</body>
+</html>

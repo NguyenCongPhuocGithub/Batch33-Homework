@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop-01</title>
+</head>
+<body>
+    <button id="add" class="add" onclick="inputName()">add name</button>
+    <button id="remove" class ="remove" onclick="removeName()">remove name</button>
+    <p id ="showNameSession"></p>
+    <p id ="showNameLocal"></p>
+    <script>
+        if(typeof Storage !== 'undefined' ){
+            console.log("Have support")
+        }else{
+                console.log('Browser does not support');
+            }
+            function inputName(){
+                //Don't exist name variable
+                if(!name){
+                    sessionStorage.setItem('name','Phước')
+                    localStorage.setItem('name','Phước')
+                    let addNameSession = sessionStorage.getItem('name');
+                    let addNameLocal = localStorage.getItem('name');
+                    document.getElementById("showNameSession").innerHTML = `Name sessionStorage is ${addNameSession}`
+                    document.getElementById("showNameLocal").innerHTML = `Name LocalStorage is ${addNameLocal}`
+                }
+            }
+
+            function removeName(){
+                if(!name){
+                    alert("Don't have exits")
+                }
+                else{
+                    let removeNameSession = sessionStorage.removeItem('name');
+                    let removeNameLocal = localStorage.removeItem('name');
+                    document.getElementById("showNameSession").innerHTML = `Name sessionStorage is ${removeNameSession}`
+                    document.getElementById("showNameLocal").innerHTML = `Name LocalStorage is ${removeNameLocal}`
+                }
+                location.reload(); 
+            }
+    </script>
+</body>
+</html>
