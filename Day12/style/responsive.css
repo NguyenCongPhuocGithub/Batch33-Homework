@@ -1,0 +1,14 @@
+@media screen and (max-width: 550px){ 
+    header .card>img{
+        width: fit-content;
+        height: fit-content;
+    }
+
+    header nav ul.dropdown-menu{
+        width: 550px;
+        height: auto;
+        border-radius: 0;
+        background-color: rgba(22, 83, 108, 0.9);
+    }
+}
+

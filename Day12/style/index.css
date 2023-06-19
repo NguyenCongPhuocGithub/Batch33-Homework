@@ -1,0 +1,235 @@
+/* header */
+nav .logo>img{
+    clip-path: circle(50% at 50% 50%);
+    width: 50px;
+    height: auto;
+}
+
+.nav_header .nav-link{
+    color: #FFFFFF;
+}
+
+.content_header .img_iphone img{
+    clip-path: ellipse(60% 70% at 50% 50%);
+    width: 90%;
+    height: auto;
+    padding: 60px 20px;
+}
+
+.content_landingPage .discription h2{
+    text-shadow: 0 1px 5px rgba(0,0,0,.2);
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.content_landingPage .discription h5{
+    line-height: 1.4;
+    font-weight: 400;
+    text-shadow: 0 1px 5px rgba(0,0,0,.5);
+    font-size: 18px;
+}
+
+
+.section{
+    padding: 50px 20px;
+    margin: 10px 0;
+}
+
+.section.section_clients{
+    margin-top: 0;
+}
+
+/* .section_clients */
+.section_clients{
+    background-color: #EEEEEE;
+}
+
+.list_logo{
+    text-align: center;
+    justify-content: center;
+}
+
+.section_clients p{
+    margin-top: 30px;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.section_clients h4{
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 24px;
+    width: 100%;
+}
+
+/* .section_demo */
+.section_demo .card-body h4{
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 24px;
+}
+
+.section_demo .card-body p{
+    margin-top: 30px;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+/* .section_presentation */
+.section_presentation--img img{
+    width: auto;
+    height: 100%;
+}
+
+.section_presentation{
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.section_presentation--content h4, .section_presentation--content p{
+    margin-bottom: 30px ;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.section_presentation--content h4{
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #333;
+    font-size: 30px;
+    line-height: 24px;
+}
+
+/* .section_features */
+.section_features .card.card-body{
+    width: 100%;
+    min-height: 390px;
+    padding: 10px 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.section_features .card .icon i{
+    color: #0bf;
+    margin-top: 50px;
+}
+
+.section_features .card.card-body .text h4{
+    font-weight: 300;
+    font-size: 18px;
+    margin: 30px 0 30px 0;
+}
+
+.section_features .row .card.card-body .text p{
+    font-size: 16px;
+    line-height: 22px;
+    color: #777;
+}
+
+.section_features .row .text-center{
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 24px;
+}
+/* .section_testimonial */
+.section_testimonial .owl-carousel{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section_testimonial .owl-carousel .item .face{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.section_testimonial .owl-carousel .item .carousel_caption{
+    text-align: center;
+}
+
+.section_testimonial .owl-carousel .item .carousel_caption p{
+    color: #9a9a9a;
+}
+
+.section_testimonial .owl-carousel .item .carousel_caption h3{
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 46px;
+}
+
+
+
+.content_landingPage{
+    margin: 100px 0;
+}
+
+.content_landingPage .discription{
+    margin: 50px 0;
+}
+
+.content_landingPage .discription h2,  .content_landingPage .discription h5{
+    padding-bottom: 30px;
+}
+
+.content_landingPage .discription h2{
+    font-size: 40px;
+}
+
+.button_header .btn{
+    color: #EEEEEE;
+}
+
+.button_header .btn-light{
+    color:#9a9a9a;
+}
+
+
+/* .section_no_padding */
+.section_no_padding .info{
+    width: 100%;
+    text-align: center;
+}
+
+.section_no_padding img{
+    height: 600px;
+}
+
+/* footer */
+footer nav .nav-link{ 
+    color: #9a9a9a;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+footer .copyright{
+    color: #9a9a9a;
+    font-size: 16px;
+}
+
+footer .copyright a{
+    text-decoration: none;
+}
+
+
+
+
+
+
