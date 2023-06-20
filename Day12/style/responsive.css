@@ -8,7 +8,8 @@
         width: 767px;
         height: auto;
         border-radius: 0;
-        background-color: rgba(22, 83, 108, 0.9);
+        background-color: rgba(30, 55, 62, 0.9);
+        overflow: hidden;
     }
-}
 
+}
