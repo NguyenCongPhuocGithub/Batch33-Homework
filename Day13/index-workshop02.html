@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop02</title>
+    <style>
+        /* #nav_toggle::after{
+            list-style: none;
+            color: black;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+        } */
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            outline: 0px;
+        }
+
+        #toggle-mobile {
+                display: block;
+            }
+
+            #toggle-mobile span,
+            #toggle-mobile span:before,
+            #toggle-mobile span:after {
+                background-color: black;
+                display: inline-block;
+                height: 5px;
+                width: 30px;
+            }
+
+            #toggle-mobile span {
+                position: relative;
+            }
+
+            #toggle-mobile span:before,
+            #toggle-mobile span:after {
+                position: absolute;
+                content: "";
+                left: 0px;
+            }
+
+            #toggle-mobile span:before {
+                bottom: 8px
+            }
+
+            #toggle-mobile span:after {
+                top: 8px
+            } 
+
+            #toggle-mobile{
+                margin-bottom: 10px;
+                margin-right: 10px;
+                align-items: center;
+            }
+
+            #nav-toggle{
+                display: none;
+            }
+    </style>
+</head>
+<body>
+    <div style="display: flex; ">
+        <div id="toggle-mobile">
+            <span></span>
+        </div>
+       
+        <select id="show-nav">
+            <option value="none">none</option>
+            <option value="slideToggle">slideToggle</option>
+            <option value="show">show</option>
+            <option value="fadeIn">fadeIn</option>
+            <option value="slideDown">slideDown</option>
+        </select>
+    </div>
+    <nav>
+        <ul id="nav-toggle">
+            <li>Home</li>
+            <li>Product</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="none"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script>
+    // CSS của #nav_toggle
+        $("#nav-toggle").css({
+            'list-style':'none'
+        });
+
+        // $("#toggle-mobile span").css({
+        //     'position':'relative',
+        // })
+
+        // $("#toggle-mobile span:before").css({
+        //     'position': 'absolute',
+        //     'left' : '0',
+        //     'top' : '-5px'
+        // })
+
+        // $("#toggle-mobile span:after").css({
+        //     'position': 'absolute',
+        //     'left' : '0',
+        //     'bottom' : '-5px'
+        // })
+
+        // $("#toggle-mobile span, #toggle-mobile span:before , #toggle-mobile span:after").css({
+        //     'width':'30px',
+        //     'height':'5px',
+        //     'color': 'black',
+        //     'display' : 'inline-block',
+        //     'content': '""'
+        // })
+        let resultNavType;
+        $('#toggle-mobile').on('click', function(){
+            if (($('#show-nav').val()) == "none") {
+                $('#none').html("display type not selected, please select");
+                $('#nav-toggle').css({
+                    'display':'none'
+                })
+                console.log($('#show-nav').val());
+                console.log('okie');
+            } else if(($('#show-nav').val()) == "slideToggle"){
+                // $('#nav-toggle').css({
+                //     'display':'block'
+                // });
+                resultNavType = $('#nav-toggle').slideToggle();
+                console.log($('#show-nav').val());
+                console.log('okie');
+            }else if(($('#show-nav').val()) == "show"){
+                // $('#nav-toggle').css({
+                //     'display':'block'
+                // })
+                resultNavType = $('#nav-toggle').show(2000)
+                console.log($('#show-nav').val());
+                console.log('okie');
+            }else if(($('#show-nav').val()) == "fadeIn"){
+                // $('#nav-toggle').css({
+                //     'display':'block'
+                // });
+                resultNavType = $('#nav-toggle').fadeIn(3000);
+                console.log($('#show-nav').val());
+                console.log('okie');
+            }else if(($('#show-nav').val()) == "slideDown"){
+                // $('#nav-toggle').css({
+                //     'display':'block'
+                // });
+                resultNavType = $('#nav-toggle').slideDown(2000);
+                console.log($('#show-nav').val());
+                console.log('okie');
+            }
+            resultNavType;
+        })
+
+        
+
+
+
+
+   </script>
+</body>
+</html>

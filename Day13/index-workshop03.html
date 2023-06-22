@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop03</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="child_one">Child 1</li>
+        <li class="child_two">
+            <img src="http://via.placeholder.com/200x200.png" alt="photo" />
+        </li>
+        <li class="child_three"><a href="link3">Child 3</a></li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        // step 01
+        $('#list').addClass('list');
+        //step 02
+        let child_one = $('.list li').first().html();
+        console.log(child_one)
+        // step 03
+        let src =$('.list li img').attr('src');
+        let atl =$('.list li img').attr('alt')
+        console.log(src)
+        console.log(atl)
+        // step 04
+        src =$('.list li img').attr('src','http://via.placeholder.com/300x300.png');
+        atl =$('.list li img').attr('alt', 'photo_edit')
+        console.log(src)
+        console.log(atl)
+        // step 05
+        let editNameClass = $('.list li:nth-child(3)').first().html();
+        console.log(editNameClass)
+    </script>
+</body>
+</html>

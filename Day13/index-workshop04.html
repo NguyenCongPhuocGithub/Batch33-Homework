@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop04</title>
+</head>
+<body>
+    <input class="username" placeholder="username" type="text" name="username" value="" />
+    <input class="password" placeholder="password" type="text" name="password" value="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //step 01
+        $('.username').attr('value', 'phuoc')
+        $('.password').attr('value', '69 Lý Thái Tổ, Đà Nẵng')
+        //step 02
+        $('.username').attr('id', 'username')
+        $('.password').attr('id', 'password')
+        //step 03
+        let userName = $('#username').attr('value')
+        let password = $('#password').attr('value')
+        console.log(userName,password)
+    </script>
+</body>
+</html>
