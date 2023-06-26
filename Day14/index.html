@@ -1,0 +1,897 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo web fashion</title>
+  <!-- Thư viện carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Thư viện fontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Thư viện animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Thư viện tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Thư viện CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <header>
+    <div class="container mx-auto ">
+      <div class="header_fixed">
+        <div class="header_section flex justify-center md:justify-between lg:justify-between mt-3 mb-6">
+          <div class="header_phone flex mx-3">
+            <div class="icon flex gap-2 mr-3">
+              <div class="icon_img"><i class="fa-brands fa-facebook fa-sm"></i></div>
+              <div class="icon_img"><i class="fa-brands fa-twitter fa-sm"></i></div>
+              <div class="icon_img"><i class="fa-brands fa-google-plus-g fa-sm"></i></div>
+              <div class="icon_img"><i class="fa-brands fa-pinterest fa-sm"></i></div>
+              <div class="icon_img"><i class="fa-brands fa-instagram fa-sm"></i></div>
+            </div>
+            <span class="phone">
+              call: <a href="tel:01 23.4.567.89">+01 23456789</a>
+            </span>
+          </div>
+          <div class="header_exchange hidden md:flex lg:flex mx-3 md:gap-2 lg:gap-2">
+            <div class="language_exchange">English</div>
+            <div class="currency_exchange">USD</div>
+          </div>
+        </div>
+        <div class="site_herder mb-6 mx-3 relative">
+          <div class="container mx-auto flex justify-between align-items-center items-center overflow-hidden py-3">
+            <div class="toggle_mobile_search flex md:flex lg:hidden gap-x-3 md:gap-x-3 items-center px-3">
+              <span class="symbol_toggle"><i class="fa-solid fa-sliders fa-2xl"></i></span>
+              <span class="header_search block md:hidden lg:hidden"><i
+                  class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+            </div>
+            <div class="logo">
+              <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/t-shirt-retina-logo_500x.png?v=1613697134"
+                alt="logo_img">
+            </div>
+            <div class="nav_header hidden md:hidden lg:block">
+              <ul class="flex lg:gap-x-6">
+                <li>
+                  <a href="javacript:;" class="uppercase">Demo</a>
+                </li>
+                <li>
+                  <a href="javacript:;" class="uppercase">Shop</a>
+                </li>
+                <li>
+                  <a href="javacript:;" class="uppercase">Blog</a>
+                </li>
+                <li>
+                  <a href="javacript:;" class="uppercase">Pages</a>
+                </li>
+                <li>
+                  <a href="javacript:;" class="uppercase">By Theme!</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nathan_action flex gap-x-3 px-3">
+              <div class="header_search hidden md:block lg:block">
+                <a class="icon_nt" href="javascript:;"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+              </div>
+              <div class="header_user">
+                <a class="icon_nt" href="javascript:;"><i class="fa-regular fa-user fa-lg"></i></a>
+              </div>
+              <div class="header_heart hidden md:block lg:block relative">
+                <a class="icon_nt" href="javascript:;"><i class="fa-regular fa-heart fa-lg"></i></a>
+                <div class="card_number text-white absolute flex justify-center align-items-center">0</div>
+              </div>
+              <div class="header_shopping relative">
+                <a class="icon_nt" href="javascript:;"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+                <div class="card_number text-white absolute flex justify-center align-items-center">0</div>
+              </div>
+            </div>
+          </div>
+          <nav class="toggle_mobile_nav absolute z-10 hidden">
+            <ul class="nav_mobile flex flex-col gap-y-4">
+              <p>Menu</p>
+              <li>Demo</li>
+              <li>Shop</li>
+              <li>Blog</li>
+              <li>Pages</li>
+              <li>By Theme!</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- build carosel -->
+    <div class="carosel">
+      <div class="owl-carousel owl-theme">
+        <div class="item relative">
+          <div class="item-inner absolute z-1 flex w-full h-full">
+            <div class="container mx-auto my-auto">
+              <h3 class="text-1xl md:text-2xl lg:text-2xl uppercase">Limited Time</h3>
+              <h2 class="font-bold text-2xl md:text-4xl lg:text-6xl">
+                30% Off <br />width
+                <span class="text-cyan-600">promo code</span>
+              </h2>
+              <div class="mt-3 md:mt-6 lg:mt-10">
+                <a class="bg-cyan-600 text-white py-2 px-5 md:lg:py-2 md:px-15 lg:py-3 lg:px-20" href="">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Slider_01-1_1512x.jpg" alt="" />
+        </div>
+        <div class="item relative">
+          <div class="item-inner absolute z-1 flex w-full h-full">
+            <div class="container mx-auto my-auto">
+              <h3 class="text-1xl md:text-2xl lg:text-2xl uppercase">Limited Time</h3>
+              <h2 class="font-bold text-2xl md:text-4xl lg:text-6xl">
+                30% Off <br />width
+                <span class="text-cyan-600">promo code</span>
+              </h2>
+              <div class="mt-3 md:mt-6 lg:mt-10">
+                <a class="bg-cyan-600 text-white py-2 px-5 md:lg:py-2 md:px-15 lg:py-3 lg:px-20" href="">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Slider_02-1_1512x.jpg" alt="" />
+        </div>
+        <div class="item relative">
+          <div class="item-inner absolute z-1 flex w-full h-full">
+            <div class="container mx-auto my-auto">
+              <h3 class="text-1xl md:text-2xl lg:text-2xl uppercase">Limited Time</h3>
+              <h2 class="font-bold text-2xl md:text-4xl lg:text-6xl">
+                30% Off <br />width
+                <span class="text-cyan-600">promo code</span>
+              </h2>
+              <div class="mt-3 md:mt-6 lg:mt-10">
+                <a class="bg-cyan-600 text-white py-2 px-5 md:lg:py-2 md:px-15 lg:py-3 lg:px-20" href="">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Slider_03_1512x.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- end build carousel -->
+  </header>
+  <main>
+    <section class="featuredCategori my-10 mx-3">
+      <div class="container mx-auto">
+        <div class="section_header_title text-center mb-10">
+          <h2 class="text-4xl font-bold">Featured Categories</h2>
+        </div>
+      </div>
+      <div class="categories_wrapper grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+        <div class="item overflow-hidden text-center">
+          <a href="javascript:;">
+            <img class="mx-auto" src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Men_300x.jpg?v=1613697134"
+              alt="">
+            <p class="mt-2 font-bold text-gray-600">Cloth</p>
+          </a>
+        </div>
+        <div class="item overflow-hidden text-center">
+          <a href="javascript:;">
+            <img class="mx-auto"
+              src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Women_300x.jpg?v=1613697134" alt="">
+            <p class="mt-2 font-bold text-gray-600">Medical Mask</p>
+          </a>
+        </div>
+        <div class="item overflow-hidden text-center">
+          <a href="javascript:;">
+            <img class="mx-auto"
+              src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Youth_300x.jpg?v=1613697134" alt="">
+            <p class="mt-2 font-bold text-gray-600">Medical Mask</p>
+          </a>
+        </div>
+        <div class="item overflow-hidden text-center">
+          <a href="javascript:;">
+            <img class="mx-auto" src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Home_300x.jpg?v=1613697134"
+              alt="">
+            <p class="mt-2 font-bold text-gray-600">Medical Mask</p>
+          </a>
+        </div>
+        <div class="item overflow-hidden text-center">
+          <a href="javascript:;">
+            <img class="mx-auto"
+              src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Phone-Case_300x.jpg?v=1613697134" alt="">
+            <p class="mt-2 font-bold text-gray-600">Medical Mask</p>
+          </a>
+        </div>
+        <div class="item overflow-hidden text-center">
+          <a href="javascript:;">
+            <img class="mx-auto" src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Bags_300x.jpg?v=1613697134"
+              alt="">
+            <p class="mt-2 font-bold text-gray-600">Medical Mask</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="recommend my-10 mx-3">
+      <div class="container mx-auto">
+        <div class="section_header_title text-center mb-10">
+          <h2 class="text-4xl font-bold">Recommend for you</h2>
+        </div>
+        <div class="tab_list">
+          <ul
+            class="product_list grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 text-center uppercase text-white mx-10 my-10 md:mx-20 md:my-10 lg:mx-60 lg:my-10">
+            <li class="bg-zinc-700 py-3">
+              <a href="javascript:;"><span>New Arrival</span></a>
+            </li>
+            <li class="bg-zinc-700 py-3">
+              <a href="javascript:;"><span>Best Selling</span></a>
+            </li>
+            <li class="bg-zinc-700 py-3">
+              <a href="javascript:;"><span>On Sale</span></a>
+            </li>
+            <li class="bg-zinc-700 py-3">
+              <a href="javascript:;"><span>Featured</span></a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="recommend_wrapper grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 place-content-center place-items-center">
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image4-28_3472cc34-af73-48db-8e67-b14cc0a1acc0_360x.jpg?v=1622189737"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image4-28_3472cc34-af73-48db-8e67-b14cc0a1acc0_360x.jpg?v=1622189737"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image8-21_a8aee956-e160-4aa2-a04b-075e0d4ad8f5_360x.jpg?v=1622189737"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Test</a>
+                  </div>
+                  <div class="price">
+                    <strong>$35.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.4_360x.jpg?v=1597652543"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.4_360x.jpg?v=1597652543"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.3_360x.jpg?v=1597652543"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Drawstring Bag</a>
+                  </div>
+                  <div class="price">
+                    <strong>$22.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/phone_case-03_360x.jpg?v=1597652212"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/phone_case-03_360x.jpg?v=1597652212"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/phone_case-02_360x.jpg?v=1597652223"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Lurcher Phone Case</a>
+                  </div>
+                  <div class="price">
+                    <strong>$6.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/silocon-case02_360x.jpg?v=1597651432"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/silocon-case02_360x.jpg?v=1597651432"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/silocon-case01_360x.jpg?v=1597651432"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Silicone Phone Case</a>
+                  </div>
+                  <div class="price">
+                    <strong>$22.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.1_360x.jpg?v=1597650560"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.1_3600x.jpg?v=1597650560"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image-3_360x.jpg?v=1597650560"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Tote Bags</a>
+                  </div>
+                  <div class="price">
+                    <strong>$22.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image5-16_360x.jpg?v=1597649319"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image5-16_360x.jpg?v=1597649319"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image4-16_360x.jpg?v=1597649319"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Unicorn Sweater</a>
+                  </div>
+                  <div class="price">
+                    <strong>$28.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image7-14_3600x.jpg?v=1597638493"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image7-14_360x.jpg?v=1597638493"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image6-15_360x.jpg?v=1597638493"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Unicorn T-shirt</a>
+                  </div>
+                  <div class="price">
+                    <strong>$28.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image-Recovered-18_360x.jpg?v=1597651890"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image-Recovered-18_360x.jpg?v=1597651890"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image5-18_360x.jpg?v=1597651890"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Fabric Pillow</a>
+                  </div>
+                  <div class="price">
+                    <strong>$28.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="categoriStyle my-10 mx-3">
+      <div class="container mx-auto flex-auto justify-between">
+        <div class="categoriStyleList grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 place-items-center">
+          <div class="item_categori relative">
+            <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_01_500x.jpg?v=1613697134" alt="">
+            <div class="item_categori_text absolute top-1/3 left-10 md:top-1/4 md:left-4  lg:top-1/3 lg:left-10">
+              <h3>Bag with<br>rose pattern</h3>
+              <p>Sale off 25%</p>
+            </div>
+          </div>
+          <div class="item_categori relative">
+            <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_02_500x.jpg?v=1613697134" alt="">
+            <div class="item_categori_text absolute top-1/3 left-10 md:top-1/4 md:left-4  lg:top-1/3 lg:left-10">
+              <h3>Hello<br>Summer</h3>
+              <p>Sale off 20%</p>
+            </div>
+          </div>
+          <div class="item_categori relative">
+            <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_03_500x.jpg?v=1613697134" alt="">
+            <div class="item_categori_text absolute top-1/3 left-10 md:top-1/4 md:left-4  lg:top-1/3 lg:left-10">
+              <h3>Let's party<br>Hard Pillow</h3>
+              <p>Sale off 20%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="featuredItem my-10 mx-3">
+      <div class="container mx-auto">
+        <div class="section_header_title text-center mb-10">
+          <h2 class="text-4xl font-bold">Featured Items</h2>
+          <p class="text-center">Find a bright ideal to suit your taste with our great selection of suspension, wall,
+            floor and table light</p>
+        </div>
+        <div class="itemFeaturedList grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 place-items-center">
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.4_360x.jpg?v=1597652543"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.4_360x.jpg?v=1597652543"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.3_360x.jpg?v=1597652543"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Drawstring Bag</a>
+                  </div>
+                  <div class="price">
+                    <strong>$22.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.1_360x.jpg?v=1597650560"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.1_3600x.jpg?v=1597650560"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image-3_360x.jpg?v=1597650560"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Tote Bags</a>
+                  </div>
+                  <div class="price">
+                    <strong>$22.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item group/item">
+            <a href="javascript:;">
+              <div class="photo_img relative">
+                <img
+                  data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image8-7_360x.jpg?v=1597638043"
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image8-7_360x.jpg?v=1597638043"
+                  data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image3-9_360x.jpg?v=1597638043"
+                  alt="img_product">
+                <div class="favourite absolute top-0 right-4 z-1  rounded-full">
+                  <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                <!--group-hover: sử dụng để định dạng element child khi element cha được hover.
+                    item:right-4: đặt bên phải và cách element cha 4 đơn vị.
+                    Note: element cha đã có đặt class group/item để làm selector.
+                    group-hover/item:right-4  group-hover/item:opacity-100 -->
+                <div
+                  class="quick-view bg-gray-700 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 top-20  z-1 rounded-full">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <div
+                  class="quick-view bg-cyan-600 text-white p-3 absolute transition-all duration-300 ease-in-out right-0 opacity-0  group-hover/item:right-4  group-hover/item:opacity-100 bottom-20  z-1 rounded-full">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="product_info_wrap">
+                  <div class="name">
+                    <a href="javascript:;">Sway T-shirt</a>
+                  </div>
+                  <div class="price">
+                    <strong>$18.00</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slideShow my-10 mx-3">
+      <div class="bg_slideShow relative overflow-hidden">
+        <div class="item-inner absolute z-1 flex w-full h-full">
+          <div class="container mx-auto my-auto">
+            <h3 class="text-xs md:text-sm lg:text-1xl uppercase">New Design</h3>
+            <h2 class="font-bold text-xs md:text-2xl lg:text-3xl">
+              Up to 50% Off <br />All T-Shirt & Accessories
+            </h2>
+            <div class="mt-auto md:mt-2 lg:mt-4">
+              <a class="bg-cyan-600 text-white text-xs md:text-xl lg:text-2xl py-sm-1 px-5 md:py-1 md:px-6 lg:py-2 lg:px-10"
+                href="">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_04_3000x2000.jpg?v=1613697134" alt="">
+      </div>
+    </section>
+    <section class="banner_parallax my-10 mx-3">
+      <div class="container mx-auto clearfix">
+        <div class="parallax_wrap grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <div class="parallax">
+            <div class="parallax_icon">
+              <i class="fa-solid fa-plane fa-2xl"></i>
+            </div>
+            <div class="parallax_text">
+              <h3>Free Shipping</h3>
+              <p>Free Shipping for all US order</p>
+            </div>
+          </div>
+          <div class="parallax ">
+            <div class="parallax_icon fa-2xl">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="parallax_text">
+              <h3>Support 24/7</h3>
+              <p>We support 24h a day</p>
+            </div>
+          </div>
+          <div class="parallax">
+            <div class="parallax_icon fa-2xl">
+              <i class="fa-solid fa-repeat"></i>
+            </div>
+            <div class="parallax_text">
+              <h3>100% Money Back</h3>
+              <p>You have 30 days to Return</p>
+            </div>
+          </div>
+          <div class="parallax">
+            <div class="parallax_icon fa-2xl">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <div class="parallax_text">
+              <h3>Payment Secure</h3>
+              <p>We ensure secure payment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer_wrapper mx-3">
+      <div class="footer_top my-10">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-12 items-center gap-y-8">
+            <div class="col-span-12 md:col-span-6 lg:col-span-3">
+              <div class="logo">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/t-shirt-retina-logo_180x.png?v=1613697134"
+                  alt="">
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6 lg:col-span-3">
+              <ul class="icon_footer flex gap-3 opacity-50">
+                <li><i class="fa-brands fa-facebook fa-md"></i></li>
+                <li><i class="fa-brands fa-twitter fa-md"></i></li>
+                <li><i class="fa-brands fa-google-plus-g fa-md"></i></li>
+                <li><i class="fa-brands fa-pinterest fa-md"></i></li>
+                <li><i class="fa-brands fa-instagram fa-md"></i></li>
+              </ul>
+            </div>
+            <div class="col-span-12 md:col-span-12 lg:col-span-6">
+              <div class="subscribe_client flex flex-col md:flex-row lg:flex-row items-start md:items-center lg:items-center">
+                <h4>Newsletter</h4>
+                <div class="subscribe_input flex">
+                  <input type="email" name="EMAIL" placeholder="Your email address" value="" class="input-text w-4/5 md:w-4/5 lg:w-5/6"
+                    required="required">
+                  <button class="bg-teal-600 text-white px-3 py-2">SUBSCRIBE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-12 gap-y-6">
+            <div class="col-span-12 md:col-span-6 lg:col-span-3">
+              <div class="nav_menu">
+                <ul class="menu">
+                  <li><span>Calista Wise 7292 Dictum Av.<br>Antonio, Italy. </span></li>
+                  <li><span>(+01)-800-3456-88</span></li>
+                  <li><span>nasathemes@gmail.com</span></li>
+                  <li><span>elessi.nasatheme.com</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6 lg:col-span-3">
+              <div class="nav_menu">
+                <ul class="menu">
+                  <li><span>Contact Us</span></li>
+                  <li><span>Designers</span></li>
+                  <li><span>Terms & Conditions</span></li>
+                  <li><span>Returns & Exchanges</span></li>
+                  <li><span>Shipping & Delivery</span></li>
+                  <li><span>Privacy Policy</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6 lg:col-span-3">
+              <div class="nav_menu">
+                <ul class="menu">
+                  <li><span>Clothing</span></li>
+                  <li><span>Women</span></li>
+                  <li><span>On Sale</span></li>
+                  <li><span>Accessories</span></li>
+                  <li><span>New</span></li>
+                  <li><span>Men</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6 lg:col-span-3">
+              <div class="nav_menu">
+                  <ul class="menu nav_date mb-3">
+                    <li>
+                      <span>Monday - Friday</span>
+                      <span>08:00 - 20:00</span>
+                    </li>
+                    <li>
+                      <span>Saturday</span>
+                      <span>09:00 - 21:00</span>
+                    </li>
+                    <li>
+                      <span>Sunday</span>
+                      <span>13:00 - 22:00</span>
+                    </li>
+                  </ul>
+                <div class="payment_icon">
+                  <ul class="flex gap-x-2 justify-end">
+                    <li><i class="fa-brands fa-cc-visa fa-xl"></i></li>
+                    <li><i class="fa-brands fa-cc-mastercard fa-xl"></i></li>
+                    <li><i class="fa-brands fa-cc-amex fa-xl"></i></li>
+                    <li><i class="fa-brands fa-cc-paypal fa-xl"></i></li>
+                    <li><i class="fa-brands fa-cc-diners-club fa-xl"></i></li>
+                    <li><i class="fa-brands fa-cc-discover fa-xl"></i></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_end py-10 px-3 text-center bg-slate-50">
+      <div class="design_by"><i class="fa-regular fa-copyright"></i>  2023  Created by <a href="mailto:nguyencongphuoccv@gmail.com?subject=Email to Nguyễn Công Phước" target="_blank"><span style="color: #f76b6a; font-size: 15px;">Nguyễn Công Phước</span></a>. <br>Web front-end demo.</div>
+    </div>
+  </footer>
+
+
+  <!-- Thư viện jquery và carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- build carousel -->
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      // margin:10,
+      // nav:true,
+      items: 1,
+      dots: true,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
+    })
+  </script>
+  <!-- end bulid carosel -->
+  <!-- build auto change photo product -->
+  <script>
+    $(".recommend_wrapper .item .photo_img img ").on("mouseover", function () {
+      let img = $(this);
+      let second = img.attr('data-second'); //bắt sự kiện get data-second 
+      img.attr('src', second).fadeIn(1000); //truyền data-second vào src - render
+    })
+
+    $(".recommend_wrapper .item .photo_img img").on("mouseout", function () {
+      let img = $(this);
+      let first = img.data('first'); //cách thứ 2 để get attribute data
+      img.attr('src', first).fadeIn(1000);
+    });
+
+    $(".itemFeaturedList .item .photo_img img ").on("mouseover", function () {
+      let img = $(this);
+      let second = img.attr('data-second'); //bắt sự kiện get data-second 
+      img.attr('src', second).fadeIn(1000); //truyền data-second vào src - render
+    })
+
+    $(".itemFeaturedList .item .photo_img img").on("mouseout", function () {
+      let img = $(this);
+      let first = img.data('first'); //cách thứ 2 để get attribute data
+      img.attr('src', first).fadeIn(1000);
+    });
+  </script>
+  <!-- end build auto change photo product -->
+  <!-- toggle_mobile_nav -->
+  <script>
+    $(".symbol_toggle").on("click",function(){
+      $(".toggle_mobile_nav").slideToggle();
+      console.log("okie")
+    })
+  </script>
+  <!-- end toggle_mobile_nav -->
+  <!-- fixed header -->
+  <script>
+     $(window).scroll(function fix_element(){
+          // điều kiện cần kiểm tra
+          $(window).scrollTop() > 100
+          // sử dụng ? để kiểm tra điều kiện trả về true
+          // sử dụng : để kiểm tra điều kiện trả về false
+              ? $("header .header_fixed").addClass("fixed top-0 left-0 right-0 drop-shadow-sm z-50", function(){
+                $("this").fadeIn(1000);
+              })
+              : $("header .header_fixed").removeClass("fixed top-0 left-0 right-0 drop-shadow-sm z-50")
+          return fix_element;
+      }());
+  </script>
+  <!-- end fixed header -->
+</body>
+
+</html>

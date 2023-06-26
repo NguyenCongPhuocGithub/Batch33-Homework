@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.logo img{
+    width: 120px;
+    height: auto;
+}
+
+header .header_fixed{
+    background-color: #FFFFFF;
+}
