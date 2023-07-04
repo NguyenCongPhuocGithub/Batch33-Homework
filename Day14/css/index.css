@@ -154,5 +154,6 @@
     opacity: 60%;
 }
 
-
-
+.subscribe_client .subscribe_input input[type=email]{
+    padding-left: 10px;
+}

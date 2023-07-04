@@ -98,7 +98,7 @@
             </div>
           </div>
           <nav class="toggle_mobile_nav absolute z-10 hidden">
-            <ul class="nav_mobile flex flex-col gap-y-4">
+            <ul class="nav_mobile flex md:flex lg:hidden flex-col md:flex-col gap-y-4">
               <p>Menu</p>
               <li>Demo</li>
               <li>Shop</li>
@@ -111,11 +111,11 @@
       </div>
     </div>
     <!-- build carosel -->
-    <div class="carosel">
+    <div class="carosel relative">
       <div class="owl-carousel owl-theme">
         <div class="item relative">
           <div class="item-inner absolute z-1 flex w-full h-full">
-            <div class="container mx-auto my-auto">
+            <div class="content_carosel_header container mx-auto my-auto">
               <h3 class="text-1xl md:text-2xl lg:text-2xl uppercase">Limited Time</h3>
               <h2 class="font-bold text-2xl md:text-4xl lg:text-6xl">
                 30% Off <br />width
@@ -130,7 +130,7 @@
         </div>
         <div class="item relative">
           <div class="item-inner absolute z-1 flex w-full h-full">
-            <div class="container mx-auto my-auto">
+            <div class=" content_carosel_header container mx-auto my-auto">
               <h3 class="text-1xl md:text-2xl lg:text-2xl uppercase">Limited Time</h3>
               <h2 class="font-bold text-2xl md:text-4xl lg:text-6xl">
                 30% Off <br />width
@@ -145,7 +145,7 @@
         </div>
         <div class="item relative">
           <div class="item-inner absolute z-1 flex w-full h-full">
-            <div class="container mx-auto my-auto">
+            <div class="content_carosel_header container mx-auto my-auto">
               <h3 class="text-1xl md:text-2xl lg:text-2xl uppercase">Limited Time</h3>
               <h2 class="font-bold text-2xl md:text-4xl lg:text-6xl">
                 30% Off <br />width
@@ -738,7 +738,7 @@
               <div class="subscribe_client flex flex-col md:flex-row lg:flex-row items-start md:items-center lg:items-center">
                 <h4>Newsletter</h4>
                 <div class="subscribe_input flex">
-                  <input type="email" name="EMAIL" placeholder="Your email address" value="" class="input-text w-4/5 md:w-4/5 lg:w-5/6"
+                  <input type="email" name="EMAIL" placeholder="Your email address" value class="input-text w-4/5 md:w-4/5 lg:w-5/6"
                     required="required">
                   <button class="bg-teal-600 text-white px-3 py-2">SUBSCRIBE</button>
                 </div>
@@ -838,10 +838,33 @@
       dots: true,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000
+      autoplaySpeed: 1000,
+      animateIn: "animate__lightSpeedInRight",
+      animateOut: 'animate__fadeOutTopLeft',
+      smartSpeed: 450,
+      //build transition for carousel header 
+      onTranslated: function() { //onTranslate - event được kích hoạt khi carousel chuyển sang slide khác
+        $('.owl-item.active .content_carosel_header').addClass('animate__animated animate__fadeInRight');
+        $(".animate__animated.animate__fadeInRight").css({
+          "animation-duration": "2s",
+          // "visibility": "visible"
+        });
+      },
+      onTranslate: function(){
+        // $(".animate__animated.animate__fadeInRight").css({
+        //   "visibility": "hidden"
+        // });
+        $('.owl-item.active .content_carosel_header').removeClass('animate__animated animate__fadeInRight');
+      },
     })
+    $('.owl-item.active .content_carosel_header').addClass('animate__animated animate__fadeInRight');
+    $(".animate__animated.animate__fadeInRight").css({
+          "animation-duration": "2s",
+        })
+      // end transition for carousel header 
   </script>
   <!-- end bulid carosel -->
+
   <!-- build auto change photo product -->
   <script>
     $(".recommend_wrapper .item .photo_img img ").on("mouseover", function () {
@@ -869,6 +892,7 @@
     });
   </script>
   <!-- end build auto change photo product -->
+
   <!-- toggle_mobile_nav -->
   <script>
     $(".symbol_toggle").on("click",function(){
@@ -877,6 +901,7 @@
     })
   </script>
   <!-- end toggle_mobile_nav -->
+
   <!-- fixed header -->
   <script>
      $(window).scroll(function fix_element(){
